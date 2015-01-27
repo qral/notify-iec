@@ -24,16 +24,12 @@ request({
    toFind = $("div.alert.alert-info >p").html();
    //toFind = $("div.alert.alert-info >pp").html(); // should be null
 
-   //if (null == toFind) { console.log("je null") }
-
    console.log("[p tag value]: " + toFind )
-   // na konci mají mezeru
+   // on the end is _space_ 
    closedText = "The International Experience Canada (IEC) 2015 season will not open before mid-February 2015. ";
 
-//console.log(toFind.length);
-//console.log(closedText.length);
 
-  // není třeba čekovat ostatní
+  // it's enough to check this - we don't need: if (null == toFind) { console.log("je null") }
   if (toFind != closedText) {
     console.log("ZMENA! IEC OPENED?");
     notify();
@@ -41,35 +37,3 @@ request({
   else
     console.log("IEC still CLOSED..")
 });
-
-
-
-// xpath je no-go pač by se to muselo sanitizovat pač to chce validní xml(xhtml)
-/* viz: http://stackoverflow.com/questions/25753368/performant-parsing-of-pages-with-node-js-and-xpath
-jinak to bleje tohle:
-" missed quot(")!! 
-@#[line:162,col:1]
-attribute "top" missed quot(")!! 
-@#[line:162,col:1]
-unclosed xml attribute 
-@#[line:162,col:70]
-unclosed xml attribute 
-@#[line:162,col:127]
-unclosed xml attribute 
-@#[line:162,col:267]
-unclosed xml attribute 
-@#[line:162,col:306]
-
-from:
-
-request({
-   uri: "http://www.bazos.cz",
-   }, function(error, response, body) {
-   //var $ = cheerio.load(body);
-
-   //var xml = "<book><title>Harry Potter</title></book>"
-   var doc = new dom().parseFromString(body)
-   var title = xpath.select("/html/body/div[1]/table[3]/tbody/tr/td/div[3]/text()", doc).toString()
-   console.log("AAAAAAA:" + title)
-   ....
-*/
