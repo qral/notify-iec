@@ -9,14 +9,15 @@
   "dependencies": {
     "cheerio": "0.18.x",
     "request": "2.51.x",
-    "sendgrid": "1.5.0"
+    "sendgrid": "1.5.0",
+    "temporal": "0.4.0"
   },
   "engines": {
     "node": "0.10.x"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/qral/notify-iec"
   },
   "keywords": [
     "node",
