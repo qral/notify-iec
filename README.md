@@ -3,7 +3,7 @@ Just wanted to try it.
 
 ## QUICK START
 ```sh
-\# emerge nodejs  
+# emerge nodejs  
 $ npm install request  
 $ npm install cheerio  
 $ node index.js  
@@ -24,6 +24,7 @@ https://github.com/cheeriojs/cheerio
 http://google.com and others.
 
 Special thanks to [cheerio repl](https://tubes.io/blog/2012/11/30/debugging-cheerio-selectors-made-easy/).  
+Try it!  
 
 ```sh
 $ npm install -g cheerio-repl

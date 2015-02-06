@@ -28,12 +28,11 @@ request({
    // on the end is _space_ 
    closedText = "The International Experience Canada (IEC) 2015 season will not open before mid-February 2015. ";
 
-
   // it's enough to check this - we don't need: if (null == toFind) { console.log("je null") }
   if (toFind != closedText) {
     console.log("ZMENA! IEC OPENED?");
     notify();
-  }
-  else
+  } else {
     console.log("IEC still CLOSED..")
+  }
 });
