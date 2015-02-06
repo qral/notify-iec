@@ -16,8 +16,10 @@ function notify() {
     console.log(json);
   });
 }
+
 opened = 0;
-temporal.loop(5000, function() { //60000*5
+
+temporal.loop(60000*5, function() { //60000*5 is 5 mins
   console.log("[+] repeating 5 min");
 
   request({
@@ -36,17 +38,16 @@ temporal.loop(5000, function() { //60000*5
     if (toFind != closedText) {
       console.log("DIFF! IEC OPENED?");
       notify();
+      opened += 1;
     } else {
       console.log("IEC still CLOSED..");
-      opened += 1;
     }
   })
-  console.log(opened);
  
-  if (opened===2) {
+  if (opened === 5) { // pls no more then 5 notifications
     console.log("STOPPING!");
-    console.log(this.called);
     this.stop();
+    console.log("Loop ran: " + this.called + " times.");
   };
 
 });
