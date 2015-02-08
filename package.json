@@ -1,6 +1,6 @@
 {
   "name": "notify-iec",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Notifier of IEC opening",
   "main": "index.js",
   "scripts": {
