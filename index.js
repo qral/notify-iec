@@ -19,7 +19,8 @@ function notify() {
 
 opened = 0;
 
-temporal.loop(60000*5, function() { //60000*5 is 5 mins
+// check the site every 5 minutes
+temporal.loop(60000*5, function() {
   console.log("[+] repeating 5 min");
 
   request({
